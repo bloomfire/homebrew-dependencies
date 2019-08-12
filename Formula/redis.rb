@@ -1,4 +1,4 @@
-class RedisAT4010 < Formula
+class Redis < Formula
   desc "Persistent key-value database, with built-in net interface"
   homepage "https://redis.io/"
   url "http://download.redis.io/releases/redis-4.0.10.tar.gz"

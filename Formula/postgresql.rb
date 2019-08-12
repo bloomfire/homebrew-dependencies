@@ -1,15 +1,9 @@
-class PostgresqlAT106 < Formula
+class Postgresql < Formula
   desc "Object-relational database system"
   homepage "https://www.postgresql.org/"
   url "https://ftp.postgresql.org/pub/source/v10.6/postgresql-10.6.tar.bz2"
   sha256 "68a8276f08bda8fbefe562faaf8831cb20664a7a1d3ffdbbcc5b83e08637624b"
   head "https://github.com/postgres/postgres.git"
-
-  bottle do
-    sha256 "65c19e8b98ff5f07fc17f648070c8fcd76f43e56c08e968606b9b21023c12c7d" => :mojave
-    sha256 "b91a9c12bd60400ceee985c9c30f4277e8c312b9ce097904ded877a68b411637" => :high_sierra
-    sha256 "4b0b8a27cfe02f97892ddc6f253a99544dad35087da3ba4c6b2dcdf0829551bd" => :sierra
-  end
 
   option "with-python", "Enable PL/Python3"
 
@@ -138,7 +132,7 @@ class PostgresqlAT106 < Formula
 
   test do
     system "#{bin}/initdb", testpath/"test"
-    assert_equal "#{HOMEBREW_PREFIX}/share/postgresql", shell_output("#{bin}/pg_config --sharedir").chomp
+    assert_equal "#{HOMEBREW_PREFIX}/share/postgresql@10.6", shell_output("#{bin}/pg_config --sharedir").chomp
     assert_equal "#{HOMEBREW_PREFIX}/lib", shell_output("#{bin}/pg_config --libdir").chomp
     assert_equal "#{HOMEBREW_PREFIX}/lib/postgresql", shell_output("#{bin}/pg_config --pkglibdir").chomp
   end

@@ -1,4 +1,4 @@
-class ElasticsearchAT630 < Formula
+class Elasticsearch < Formula
   desc "Distributed search & analytics engine"
   homepage "https://www.elastic.co/products/elasticsearch"
   url "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.3.0.tar.gz"

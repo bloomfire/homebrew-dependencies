@@ -1,4 +1,4 @@
-class YarnAT1130 < Formula
+class Yarn < Formula
   desc "JavaScript package manager"
   homepage "https://yarnpkg.com/"
   url "https://yarnpkg.com/downloads/1.13.0/yarn-v1.13.0.tar.gz"
