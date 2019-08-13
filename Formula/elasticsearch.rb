@@ -9,6 +9,8 @@ class Elasticsearch < Formula
     depends_on "gradle" => :build
   end
 
+  bottle :unneeded
+
   depends_on :java => "1.8"
 
   def cluster_name

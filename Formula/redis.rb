@@ -5,13 +5,6 @@ class Redis < Formula
   sha256 "1db67435a704f8d18aec9b9637b373c34aa233d65b6e174bdac4c1b161f38ca4"
   head "https://github.com/antirez/redis.git", :branch => "unstable"
 
-  bottle do
-    cellar :any_skip_relocation
-    sha256 "da7c329125b26d90abd946e3743a5715b30ca8d6585296319b64de833ffb5b47" => :high_sierra
-    sha256 "bd9961d83354840c829a77f0325246fed4faee0f5f8a9bf47c564fe98625f167" => :sierra
-    sha256 "3baf5323b7d8b875969bc44a1842e69d0efd6c71edd0117ebc898e9cc7b14d88" => :el_capitan
-  end
-
   option "with-jemalloc", "Select jemalloc as memory allocator when building Redis"
 
   def install
