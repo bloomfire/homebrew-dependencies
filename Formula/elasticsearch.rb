@@ -1,9 +1,9 @@
 class Elasticsearch < Formula
   desc "Distributed search & analytics engine"
   homepage "https://www.elastic.co/products/elasticsearch"
-  url "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.3.0.tar.gz"
-  sha256 "0464127140820d82b24bd2830232131ea85bcd49267a8bc7365e4fa391dee2a3"
-
+  url "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-oss-6.7.0.tar.gz"
+  sha256 "ffe589cf2e74a44a35f059338fdef30dffcb7196d6bfd916d64173b32c9a2451"
+  
   head do
     url "https://github.com/elasticsearch/elasticsearch.git"
     depends_on "gradle" => :build
