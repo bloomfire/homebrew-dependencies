@@ -1,8 +1,8 @@
 class Elasticsearch < Formula
   desc "Distributed search & analytics engine"
   homepage "https://www.elastic.co/products/elasticsearch"
-  url "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-oss-6.7.0.tar.gz"
-  sha256 "ffe589cf2e74a44a35f059338fdef30dffcb7196d6bfd916d64173b32c9a2451"
+  url "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.3.1-darwin-x86_64.tar.gz"
+  sha256 "bfb3418ad476bff684f1aa76a18945ce543a4375d88123ee7a46f1a7977e5f7a"
   
   head do
     url "https://github.com/elasticsearch/elasticsearch.git"
@@ -11,7 +11,7 @@ class Elasticsearch < Formula
 
   bottle :unneeded
 
-  depends_on :java => "1.8"
+  depends_on :java => "12"
 
   def cluster_name
     "elasticsearch_#{ENV["USER"]}"
@@ -54,8 +54,7 @@ class Elasticsearch < Formula
 
     bin.install libexec/"bin/elasticsearch",
                 libexec/"bin/elasticsearch-keystore",
-                libexec/"bin/elasticsearch-plugin",
-                libexec/"bin/elasticsearch-translog"
+                libexec/"bin/elasticsearch-plugin"
     bin.env_script_all_files(libexec/"bin", Language::Java.java_home_env("1.8"))
   end
 
