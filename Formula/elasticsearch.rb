@@ -55,7 +55,7 @@ class Elasticsearch < Formula
     bin.install libexec/"bin/elasticsearch",
                 libexec/"bin/elasticsearch-keystore",
                 libexec/"bin/elasticsearch-plugin"
-    bin.env_script_all_files(libexec/"bin", Language::Java.java_home_env("1.8"))
+    bin.env_script_all_files(libexec/"bin", Language::Java.java_home_env("12"))
   end
 
   def post_install
