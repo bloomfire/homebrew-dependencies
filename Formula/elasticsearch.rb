@@ -3,6 +3,7 @@ class Elasticsearch < Formula
   homepage "https://www.elastic.co/products/elasticsearch"
   url "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.3.1-darwin-x86_64.tar.gz"
   sha256 "bfb3418ad476bff684f1aa76a18945ce543a4375d88123ee7a46f1a7977e5f7a"
+  version "7.3.1"
   
   head do
     url "https://github.com/elasticsearch/elasticsearch.git"
