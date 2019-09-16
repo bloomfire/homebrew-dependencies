@@ -49,6 +49,9 @@ class Elasticsearch < Formula
       s.sub!(%r{#\s*path\.data: /path/to.+$}, "path.data: #{var}/lib/elasticsearch/")
       s.sub!(%r{#\s*path\.logs: /path/to.+$}, "path.logs: #{var}/log/elasticsearch/")
     end
+    
+    # Fix gc.logs for homebrew
+    inreplace "#{libexec}/config/jvm.options", %r{logs/gc.log}, "#{var}/log/elasticsearch/gc.log"
 
     # Move config files into etc
     (etc/"elasticsearch").install Dir[libexec/"config/*"]
