@@ -14,6 +14,7 @@ class Postgresql < Formula
   depends_on "openssl"
   depends_on "readline"
   depends_on "python" => :optional
+  depends_on "perl"
 
   def install
     # avoid adding the SDK library directory to the linker search path
