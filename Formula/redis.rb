@@ -7,9 +7,7 @@ class Redis < Formula
 
   option "with-jemalloc", "Select jemalloc as memory allocator when building Redis"
 
-  def install
-    # Architecture isn't detected correctly on 32bit Snow Leopard without help
-    ENV["OBJARCH"] = "-arch #{MacOS.preferred_arch}"
+  def install  
 
     args = %W[
       PREFIX=#{prefix}
