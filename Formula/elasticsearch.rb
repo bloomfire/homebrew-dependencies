@@ -13,7 +13,7 @@ class Elasticsearch < Formula
 
   bottle :unneeded
 
-  depends_on : "openjdk13"
+  depends_on "openjdk13"
 
   def cluster_name
     "elasticsearch_#{ENV["USER"]}"
