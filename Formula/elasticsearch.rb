@@ -13,8 +13,6 @@ class Elasticsearch < Formula
 
   bottle :unneeded
 
-  depends_on "adoptopenjdk12"
-
   def cluster_name
     "elasticsearch_#{ENV["USER"]}"
   end
